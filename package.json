@@ -1,0 +1,28 @@
+{
+  "name": "pokeraider",
+  "version": "1.0.0",
+  "description": "Pokemon GO raid chat application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MarrisSparrisNilsson/PokeRaider.git"
+  },
+  "author": "Martin Nilsson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MarrisSparrisNilsson/PokeRaider/issues"
+  },
+  "homepage": "https://github.com/MarrisSparrisNilsson/PokeRaider#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
