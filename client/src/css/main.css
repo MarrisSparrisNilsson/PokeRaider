@@ -48,7 +48,7 @@ body {
 
 .main-window {
   width: 80vw;
-  min-height: 20vh;
+  height: 70vh;
   background-color: rgba(255, 255, 255, 0.85);
   border-radius: 2px;
   box-shadow: 0px 0px 5px 1px black;
@@ -58,25 +58,30 @@ body {
 
 .container {
   display: flex;
-  justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
   /* background-color: salmon; */
   overflow-y: auto;
   /* border-radius: 2px; */
-  /* height: 100%; */
-  height: 70vh;
+  height: 100%;
   /* width: 100%; */
 }
 
 .groupChat-section {
-  background-color: rgba(177, 13, 177, 0.705);
+  background-color: rgba(107, 107, 107, 0.705);
   height: 100%;
-  /* width: 200px; */
-  min-width: 100px;
+  width: 75px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.bgwhite {
-  background-color: white;
+.groupChat-section .groupChat-bubble {
+  cursor: pointer;
+  width: 55px;
+  height: 55px;
+  margin: 10px;
+  background-color: #272727;
+  border-radius: 15px;
 }
 
 .box {
@@ -91,6 +96,72 @@ body {
   align-items: center;
 }
 
-.centerText {
-  text-align: center;
+hr {
+  width: 40%;
+  height: 3px;
+  background-color: black;
+  border-style: none;
+}
+
+.secoundary-container {
+  background-image: linear-gradient(rgba(238, 34, 34, 0.5), rgba(255, 255, 255, 0.2));
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-left: 2px solid #575757;
+}
+
+.secoundary-container #add-raid-btn {
+  background-color: #c5c5c5;
+  width: max-content;
+  padding: 2px 8px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.secoundary-container #add-raid-btn img {
+  width: 50px;
+}
+
+.route-viewer {
+  display: flex;
+  align-items: center;
+}
+
+.route-viewer span {
+  margin: 6px 8px 10px;
+  font-size: 2em;
+}
+
+.bottom-menu {
+  top: 90%;
+  background-color: #f68888;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.bottom-menu .trainer-info span {
+  color: white;
+  font-size: 1.2em;
+}
+
+.bottom-menu .trainer-info hr {
+  border: 2px solid white;
+  border-radius: 2px;
+  width: 100%;
+}
+
+.team-logo-valor {
+  background-image: url(../images/icons/Valor_icons/team-valor-logo.png);
+  background-position: center;
+  background-size: cover;
+  height: 46px;
+  width: 46px;
+  margin: 0px 10px 0px 10px;
 }
