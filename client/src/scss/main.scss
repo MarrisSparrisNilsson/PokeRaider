@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
 @import "config";
+@import "utilities";
 
 * {
     box-sizing: border-box;
@@ -43,23 +44,11 @@ body {
     z-index: -1;
 }
 
-.service-name {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.8);
-
-    padding: 3px 5px;
-    font-weight: bold;
-    top: 0;
-    position: sticky;
-    width: 100%;
-    /* border-bottom: 2px solid; */
-}
-
 .main-window {
     width: 80vw;
     // width: 100%;
     // min-height: 20vh;
-    height: 70vh;
+    // height: 70vh;
     // height: 100%;
 
     background-color: rgba(255, 255, 255, 0.85);
@@ -69,13 +58,25 @@ body {
     /* padding: 30px; */
 }
 
+.service-name {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+
+    padding: 3px 5px;
+    font-weight: bold;
+    // top: 0;
+    // position: sticky;
+    width: 100%;
+    /* border-bottom: 2px solid; */
+}
+
 .container {
     display: flex;
     align-items: flex-start;
     /* background-color: salmon; */
     overflow-y: auto;
     /* border-radius: 2px; */
-    height: 100%;
+    height: 680px;
     /* width: 100%; */
 }
 
@@ -83,6 +84,7 @@ body {
     background-color: rgba(107, 107, 107, 0.705);
     height: 100%;
     width: 75px;
+    padding: 10px;
     // max-width: 85px;
     // width: 200px;
     // min-width: 85px;
@@ -95,60 +97,91 @@ body {
         cursor: pointer;
         width: $bubble-size;
         height: $bubble-size;
-        margin: 10px;
-        background-color: rgb(39, 39, 39);
+        margin-bottom: 10px;
+        // background-color: rgb(39, 39, 39);
         border-radius: $bubble-radius;
+        background-image: url(../images/backgrounds/premier_ball_img.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
     }
-}
 
-.box {
-    padding: 30px;
-    width: fit-content;
-    height: 20vh;
+    .groupChat-bubble.home {
+        margin: 0;
+    }
 
-    opacity: 0.85;
-    border-radius: 20px;
-    /* margin-top: 10%; */
+    .groupChat-bubble.different {
+        background-image: url(../images/backgrounds/group_img.jpg);
+    }
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-hr {
-    width: 40%;
-    height: 3px;
-    background-color: black;
-    border-style: none;
+    hr {
+        width: 40%;
+        height: 3px;
+        background-color: black;
+        border-style: none;
+        margin: 10px 0px;
+    }
 }
 
 .secoundary-container {
     background-image: linear-gradient($valor-bgd-faded, $faded-white);
     padding: 30px;
-    display: flex;
-    flex-direction: column;
     height: 100%;
     border-left: 2px solid rgb(87, 87, 87);
+    width: 410px;
 
-    #add-raid-btn {
+    .side-menu-btn {
         // background-image: url(../images/icons/Add_Raid_icon.png);
-        background-color: rgb(197, 197, 197);
+        background-color: rgba(255, 255, 255, 0.4);
         // min-width: 50px;
         // height: 30px;
         width: max-content;
-        padding: 2px 8px;
-        border-radius: 5px;
+        padding: 2px 15px;
+        border-radius: 15px;
+        width: 325px;
+        height: 56px;
 
+        margin: 0px 0px 10px;
         display: flex;
         align-items: center;
 
         font-size: 1.2em;
         font-weight: bold;
 
-        img {
-            width: 50px;
+        // img {
+        //     width: 50px;
+        // }
+    }
+
+    .bottom-menu {
+        background-color: $valor-bottom-menu;
+
+        border-radius: 20px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-width: 245px;
+        width: 307px;
+
+        padding: 10px;
+
+        .trainer-info {
+            span {
+                color: white;
+                font-size: 1.2em;
+            }
+
+            hr {
+                border: 2px solid white;
+                border-radius: 2px;
+            }
         }
     }
+}
+
+.side-menu-btn.active {
+    border: 4px solid white;
 }
 
 .route-viewer {
@@ -165,30 +198,6 @@ hr {
     }
 }
 
-.bottom-menu {
-    top: 90%;
-    background-color: #f68888;
-    opacity: 0.9;
-
-    display: flex;
-    align-items: center;
-
-    padding: 10px;
-
-    .trainer-info {
-        span {
-            color: white;
-            font-size: 1.2em;
-        }
-
-        hr {
-            border: 2px solid white;
-            border-radius: 2px;
-            width: 100%;
-        }
-    }
-}
-
 .team-logo-valor {
     background-image: url(../images/icons/Valor_icons/team-valor-logo.png);
     background-position: center;
@@ -196,4 +205,36 @@ hr {
     height: 46px;
     width: 46px;
     margin: 0px 10px 0px 10px;
+}
+
+.settings-btn {
+    background-image: url(../images/icons/utility_icons/Settings.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 37px;
+    width: 37px;
+}
+
+.settings-bgd {
+    background: transparent;
+    // width: 50px;
+    // height: 50px;
+    padding: 6px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.settings-bgd:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.menu-icon {
+    height: 45px;
+    // width: 45px;
+}
+
+.menu-text {
+    margin-left: 50px;
+    font-size: 1.2em;
 }
