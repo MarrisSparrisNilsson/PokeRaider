@@ -94,7 +94,7 @@ body {
     align-items: center;
 
     .groupChat-bubble,
-    .Home-bubble {
+    .home-bubble {
         cursor: pointer;
         width: $bubble-size;
         height: $bubble-size;
@@ -107,7 +107,7 @@ body {
         background-repeat: no-repeat;
     }
 
-    .Home-bubble {
+    .home-bubble {
         margin: 0;
     }
 
@@ -116,7 +116,7 @@ body {
     }
 
     hr {
-        width: 40%;
+        width: 38px;
         height: 3px;
         background-color: black;
         border-style: none;
@@ -176,6 +176,7 @@ body {
             hr {
                 border: 2px solid white;
                 border-radius: 2px;
+                background-color: white;
             }
         }
     }
@@ -238,4 +239,22 @@ body {
 .menu-text {
     margin-left: 50px;
     font-size: 1.2em;
+}
+
+.action-page {
+    width: 100%;
+    height: 100%;
+}
+
+#Refresh_button {
+    fill: $light-valor;
+}
+.refresh_btn {
+    margin: 30px;
+    border-radius: 8px;
+    float: right;
+    width: fit-content;
+    padding: 8px;
+    background-color: $refresh-button;
+    cursor: pointer;
 }
